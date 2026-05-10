@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Couleur de fond et police générale */
+body {
+    background-color: #f0f4f8;
+    font-family: Arial, sans-serif;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Centrer tout le contenu */
+h1, h2, p, ul {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Style du titre principal */
+h1 {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    margin: 0;
+}
+/* Style des sous-titres */
+h2 {
+    color: #2980b9;
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 8px;
+    margin-top: 40px;
+}
+
+/* Style des liens */
+a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Effet au survol du lien */
+a:hover {
+    text-decoration: underline;
+}
+/* Google Font élégante */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Carte centrale avec ombre */
+body > * {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Animation au survol des li */
+li {
+    padding: 4px 0;
+    transition: padding-left 0.3s;
+}
+
+li:hover {
+    padding-left: 12px;
+    color: #2980b9;
+    cursor: pointer;
+}
+/* Style du header */
+h1 {
+    letter-spacing: 2px;
+    font-size: 2rem;
+}
