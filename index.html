@@ -1,46 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma carte de visite</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jopie Nlemvo – Développeur Web</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bonjour, je m'appelle Jopie !</h1>
-    <img src="https://via.placeholder.com/150" alt="Ma photo">
-    <hr>
-    <h2>À propos de moi</h2>
-    <p>Je crée ma première page web.</p>
-    <p>Je suis en train d'apprendre le développeur web et l'IA.</p>
-    <p>Je suis rigoureux, curieux et motivé à apprendre.</p>
 
-    <h2>Mes 5 passions</h2>
-    <ul>
-        <li>L'intelligence artificiel</li>
-        <li>Le developpement web</li>
-        <li>La technologie</li>
-        <li>L'apprentissage</li>
-        <li>L'innovation</li>
-    </ul>
+  <div class="carte">
 
-    <h2>Me contacter</h2>
-    <p>Email : <a href="mailto:nlemvojopie@gmail.com">nlemvojopie@gmail.com</a></p>
+    <!-- ✅ Header sémantique -->
+    <header>
+      <!-- ✅ Vraie photo (remplace l'URL par la tienne) -->
+      <img 
+        src="https://api.dicebear.com/7.x/initials/svg?seed=JN" 
+        alt="Photo de profil de Jopie"
+        class="avatar"
+      >
+      <h1>Bonjour, je m'appelle Jopie !</h1>
+      <p class="tagline">Développeur Web en formation · Passionné d'IA</p>
+    </header>
 
-    <h2>Ma mini calculatrice</h2>
-    <input id="nombre1" type="number" placeholder="Nombre 1">
-    <input id="nombre2" type="number" placeholder="Nombre 2">
-    <br><br>
-    <button onclick="additionner()">➕ Additionner</button>
-    <button onclick="multiplier()">✖️ Multiplier</button>
-    <p id="resultat"></p>
-    
-    <br>
-    <button id="monBouton" onclick="changerMessage()">
-        Clique sur moi ! 🎉
-    </button>
-    <p id="messageSpecial"></p>
+    <main>
 
-    <script src="script.js"></script>
+      <!-- ✅ Sections sémantiques -->
+      <section aria-label="À propos">
+        <h2>À propos de moi</h2>
+        <p>Je crée ma première page web et j'apprends le développement web et l'IA.</p>
+        <p>Je suis rigoureux, curieux et motivé à apprendre.</p>
+      </section>
+
+      <section aria-label="Passions">
+        <h2>Mes 5 passions</h2>
+        <ul>
+          <li>L'intelligence artificielle</li>
+          <li>Le développement web</li>
+          <li>La technologie</li>
+          <li>L'apprentissage</li>
+          <li>L'innovation</li>
+        </ul>
+      </section>
+
+      <section aria-label="Calculatrice">
+        <h2>Ma mini calculatrice</h2>
+        <div class="calculatrice">
+          <input id="nombre1" type="number" placeholder="Nombre 1">
+          <input id="nombre2" type="number" placeholder="Nombre 2">
+          <div class="boutons">
+            <!-- ✅ aria-label pour l'accessibilité -->
+            <button aria-label="Additionner les deux nombres" onclick="additionner()">➕ Additionner</button>
+            <button aria-label="Multiplier les deux nombres" onclick="multiplier()">✖️ Multiplier</button>
+          </div>
+          <p id="resultat"></p>
+        </div>
+      </section>
+
+      <section aria-label="Interaction">
+        <button id="monBouton" onclick="changerMessage()">Clique sur moi ! 🎉</button>
+        <p id="messageSpecial"></p>
+      </section>
+
+    </main>
+
+    <!-- ✅ Footer sémantique -->
+    <footer>
+      <h2>Me contacter</h2>
+      <p>📧 <a href="mailto:nlemvojopie@gmail.com">nlemvojopie@gmail.com</a></p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
